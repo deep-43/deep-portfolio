@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deep Yadav — Full Stack Developer</title>
+  <meta name="description" content="Deep Yadav — Full Stack Web Developer specializing in modern web applications with clean UI/UX.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Dragon Background SVG -->
+  <svg id="dragon-bg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;">
+    <defs>
+      <g id="Cabeza" transform="matrix(1, 0, 0, 1, 0, 0)">
+        <path style="fill:#FFFFFF;fill-opacity:1" d="M-28.9,-1.1L-28.55 -1.95Q-28.1 -3.1 -27.25 -2.95L-26.7 -2.95Q-27.7 -1.65 -28.9 -1.1M-18.35,-1.8Q-15.1 -10.3 -9.6 -6.05Q-15.1 -6.2 -18.35 -1.8M-18.35,1.1Q-15.1 5.45 -9.6 5.35Q-15.1 9.55 -18.35 1.1M-26.7,2.2L-27.25 2.25Q-28.1 2.4 -28.55 1.2L-28.9 0.35Q-27.7 0.9 -26.7 2.2" />
+        <path style="fill:#000000;fill-opacity:1" d="M-21.05,-8.25Q-13.6 -15.95 -1.3 -12.1Q-7.85 -8.5 -5.85 -4.35Q-2.3 -4.85 10.5 0.15Q0 4.35 -5.85 3.65Q-7.85 7.75 -1.25 12.45Q-13.6 15.2 -21.05 7.5Q-29.55 4.05 -30.2 -0.35Q-29.55 -4.8 -21.05 -8.25M-26.7,-2.95L-27.25 -2.95Q-28.1 -3.1 -28.55 -1.95L-28.9 -1.1Q-27.7 -1.65 -26.7 -2.95M-9.6,-6.05Q-15.1 -10.3 -18.35 -1.8Q-15.1 -6.2 -9.6 -6.05M-9.6,5.35Q-15.1 5.45 -18.35 1.1Q-15.1 9.55 -9.6 5.35M-28.9,0.35L-28.55 1.2Q-28.1 2.4 -27.25 2.25L-26.7 2.2Q-27.7 0.9 -28.9 0.35" />
+      </g>
+      <g id="Aletas" transform="matrix(1, 0, 0, 1, 0, 0)">
+        <linearGradient id="LinearGradID_1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.0935974, 0, 0, 0.188782, -20.55, 0)" spreadMethod="pad" x1="-819.2" y1="0" x2="819.2" y2="0">
+          <stop offset="0" style="stop-color:#CCCCCC;stop-opacity:1" />
+          <stop offset="1" style="stop-color:#000000;stop-opacity:1" />
+        </linearGradient>
+        <path style="fill:url(#LinearGradID_1) " d="M29.75,-36.85Q-17.75 -61.45 -42.05 -40.95L-45.35 -38.35L-53.7 -41.15L-51.15 -44.85Q-34.85 -68.4 21 -57.8Q-32.2 -72.1 -50.25 -50Q-53.85 -45.65 -56.05 -41.95L-64.7 -43.35L-60.6 -50.3Q-45.9 -75.55 5.1 -79.35Q-2.2 -79.8 -9.45 -79.15Q-16.2 -78.55 -22.85 -77.15Q-29.85 -75.65 -36.5 -73Q-43.05 -70.4 -48.8 -66.85Q-54.55 -63.35 -56.8 -60.3L-60.5 -55.4Q-62.95 -52.1 -67 -43.55L-70.55 -43.55L-76.35 -42.95Q-74.6 -49.1 -71.85 -54.85Q-68.9 -61.25 -64.8 -67.1Q-60.8 -73 -55.45 -77.55Q-49.9 -82.35 -43.65 -85.85L-30.6 -92.7Q-24.05 -95.95 -17 -98.25Q-63.75 -86.35 -73.65 -57.1Q-75.75 -50.75 -77.45 -42.75Q-82.9 -41.75 -88 -39.65Q-87.65 -46.65 -86.3 -53.05Q-79.8 -89.8 -36.65 -117.2Q-80.65 -94.5 -87.55 -59.55Q-88.65 -54.15 -88.95 -39.4L-89.8 -38.85L-92.7 -37.6Q-93.75 -44.35 -94.1 -51.15Q-94.4 -58.2 -93.25 -65.1Q-92.15 -72.5 -90.05 -79.65Q-88.05 -86.55 -85 -93Q-82.1 -99.3 -78.45 -105.15Q-74.6 -111.35 -70.25 -117.25Q-65.95 -123.1 -61.1 -128.55Q-70.3 -119.35 -77.9 -108.7Q-86 -97.3 -90.8 -84.05Q-95.8 -70.5 -96 -56.15Q-96.1 -46 -94.05 -36.05L-93.25 -31.55Q-93.5 -35.65 -92.35 -36Q-79.85 -42 -66.6 -40.45Q-52.45 -38.85 -39.2 -33.25Q-28.3 -29.9 -21.25 -24.15Q-17.8 -23.3 -8.6 -15.6Q-12.1 -20.75 -16.75 -24.5Q-24.55 -30.7 -34.25 -34.05L-42.55 -37Q-38.9 -41.25 -31.5 -43.25Q-24.05 -45.3 -16.2 -46.3Q-8.35 -47.35 -1 -46Q5.95 -44.75 12.75 -42.85Q19.85 -40.9 29.75 -36.85M-92.45,-27.35L-94.95 -36.25Q-109.7 -105 -27.95 -154.65Q-98.65 -103.8 -91.75 -39.4L-89.95 -40.2Q-92.2 -105.25 -5.6 -130.9Q-78.8 -99.95 -87.45 -40.9Q-83.15 -42.95 -78.45 -43.95Q-70 -101.3 17.65 -103.8Q-56.9 -93.4 -74.5 -44.55L-67.4 -45.45Q-49.1 -94.95 39.25 -75.65Q-36.75 -84.35 -62.25 -44.25L-57.3 -43.6Q-31.65 -86.5 56.15 -46.05Q-20.3 -73.35 -51.35 -41.7L-45.95 -39.75Q-17.85 -71.35 51.85 -24.8Q-8.7 -56.4 -39.75 -37.05Q-28.15 -34.05 -14.25 -24.45Q-8.6 -19.85 -5.8 -16.95Q5.95 -2.4 20 0Q5.95 2.4 -5.8 16.95Q-8.6 19.85 -14.25 24.45Q-28.15 34.05 -39.75 37.05Q-8.7 56.4 51.85 24.8Q-17.85 71.35 -45.95 39.75L-51.35 41.7Q-20.3 73.35 56.15 46.1Q-31.65 86.5 -57.3 43.65L-62.25 44.3Q-36.75 84.35 39.25 75.7Q-49.1 94.95 -67.4 45.5L-74.5 44.6Q-56.9 93.4 17.65 103.85Q-70 101.3 -78.45 43.95Q-83.15 42.95 -87.45 40.9Q-78.8 99.95 -5.6 130.9Q-92.2 105.25 -89.95 40.25L-91.75 39.4Q-98.65 103.8 -27.95 154.65Q-109.7 105 -94.95 36.3L-92.45 27.35Q-93.05 33.9 -92.05 34.75Q-91.1 35.55 -88.95 36.7L-87.95 37Q-83.7 38.25 -79.05 38.8L-77.25 38.95Q-72.55 39.3 -67.5 38.85L-65.45 38.65Q-44.4 36.05 -17.8 19.6Q-9.9 12.8 -15.15 4.4Q-18.15 3.15 -19 0Q-18.15 -3.15 -15.15 -4.4Q-9.9 -12.8 -17.8 -19.6L-17.8 -19.55Q-44.4 -36.05 -65.45 -38.6L-67.5 -38.8Q-72.55 -39.3 -77.25 -38.95L-79.05 -38.75Q-83.7 -38.25 -87.95 -36.95L-88.95 -36.65Q-91.1 -35.55 -92.05 -34.7Q-93.05 -33.9 -92.45 -27.35M-8.6,15.6Q-17.8 23.3 -21.25 24.2Q-28.3 29.9 -39.2 33.3Q-52.45 38.85 -66.6 40.5Q-79.85 42 -92.35 36Q-93.5 35.65 -93.25 31.55L-94.05 36.1Q-96.1 46.05 -96 56.15Q-95.8 70.5 -90.8 84.1Q-86 97.3 -77.9 108.75Q-70.3 119.35 -61.1 128.6Q-65.95 123.1 -70.25 117.25Q-74.6 111.35 -78.45 105.15Q-82.1 99.3 -85 93Q-88.05 86.55 -90.05 79.7Q-92.15 72.5 -93.25 65.1Q-94.4 58.2 -94.1 51.2Q-93.75 44.35 -92.7 37.6L-89.8 38.9L-88.95 39.45Q-88.65 54.15 -87.55 59.55Q-80.65 94.5 -36.65 117.25Q-79.8 89.8 -86.3 53.1Q-87.65 46.65 -88 39.65Q-82.9 41.75 -77.45 42.75Q-75.75 50.75 -73.65 57.15Q-63.75 86.35 -17 98.3Q-24.05 95.95 -30.6 92.75L-43.65 85.9Q-49.9 82.35 -55.45 77.6Q-60.8 73 -64.8 67.15Q-68.9 61.25 -71.85 54.85Q-74.6 49.1 -76.35 42.95L-70.55 43.6L-67 43.6Q-62.95 52.1 -60.5 55.4L-56.8 60.35Q-54.55 63.35 -48.8 66.9Q-43.05 70.4 -36.5 73Q-29.85 75.65 -22.85 77.15Q-16.2 78.55 -9.45 79.15Q-2.2 79.8 5.1 79.35Q-45.9 75.55 -60.6 50.3L-64.7 43.4L-56.05 41.95Q-53.85 45.65 -50.25 50Q-32.2 72.1 21 57.85Q-34.85 68.4 -51.15 44.85L-53.7 41.2L-45.35 38.35L-42.05 40.95Q-17.75 61.45 29.75 36.85Q19.85 40.9 12.75 42.9Q5.95 44.75 -1 46Q-8.35 47.35 -16.2 46.35Q-24.05 45.3 -31.5 43.3Q-38.9 41.25 -42.55 37.05L-34.25 34.05Q-24.55 30.7 -16.75 24.5Q-12.1 20.75 -8.6 15.6" />
+      </g>
+      <g id="Espina" transform="matrix(1, 0, 0, 1, 0, 0)">
+        <linearGradient id="LinearGradID_2" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.0229492, 0, 0, -0.0152893, 0, 0.05)" spreadMethod="pad" x1="-819.2" y1="0" x2="819.2" y2="0">
+          <stop offset="0" style="stop-color:#CCCCCC;stop-opacity:1" />
+          <stop offset="1" style="stop-color:#333333;stop-opacity:1" />
+        </linearGradient>
+        <path style="fill:url(#LinearGradID_2) " d="M-18.8,0Q-17.85 -5.7 -12.3 -9.6Q-11.2 -5.35 -6.5 -8.25L-6.45 -8.2L-6.2 -8.3Q1.25 -16.25 6.65 -12.4Q0.05 -12.55 0 -5.95Q2.7 -2.4 7.75 -4.1Q18 -1.45 18.8 0L-18.8 0" />
+        <linearGradient id="LinearGradID_3" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.0229492, 0, 0, 0.0152893, 0, -0.05)" spreadMethod="pad" x1="-819.2" y1="0" x2="819.2" y2="0">
+          <stop offset="0" style="stop-color:#CCCCCC;stop-opacity:1" />
+          <stop offset="1" style="stop-color:#333333;stop-opacity:1" />
+        </linearGradient>
+        <path style="fill:url(#LinearGradID_3) " d="M18.8,0Q18 1.45 7.75 4.1Q2.7 2.4 0 5.95Q0.05 12.55 6.65 12.4Q1.25 16.25 -6.2 8.35Q-6.35 8.25 -6.45 8.25L-6.5 8.25Q-11.2 5.35 -12.3 9.6Q-17.85 5.7 -18.8 0L18.8 0" />
+      </g>
+    </defs>
+    <g id="screen" />
+  </svg>
+
+  <!-- Your existing portfolio content -->
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <i class="fas fa-code logo-icon"></i>
+        Deep <span>Yadav</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#home"><i class="fas fa-home"></i> Home</a>
+        <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+        <a href="#about"><i class="fas fa-user"></i> About</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="assets/resume/Deep-Yadav-Resume.pdf" class="btn" download>
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <div class="hero-text fade-in">
+        <h1>Hi, I'm <span class="accent">Deep Yadav</span></h1>
+        <p class="lead">Full Stack Web Developer — HTML, CSS, JavaScript, PHP, MySQL</p>
+        <p class="muted">I build production-ready websites and admin dashboards with clean UI and strong UX focus.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn">
+            <i class="fas fa-rocket"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+      </div>
+      <div class="hero-card fade-in delay-1">
+        <h3><i class="fas fa-info-circle"></i> Quick Info</h3>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <strong>Location:</strong> New Delhi, India
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-briefcase"></i>
+          <div>
+            <strong>Available:</strong> Open to work
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <strong>Email:</strong> <a href="mailto:deepyadav03788@gmail.com">deepyadav03788@gmail.com</a>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <strong>Phone:</strong> +91 7982403227
+          </div>
+        </div>
+        <div style="margin-top: 20px;">
+          <a href="assets/resume/Deep-Yadav-Resume.pdf" class="btn btn-outline" download>
+            <i class="fas fa-file-pdf"></i> Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Selected Projects</h2>
+        <p>Here are some of my recent projects that showcase my skills and experience</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card fade-in delay-1" data-title="LuxuryScents" data-desc="Premium fragrance e-commerce with Razorpay integration and admin panel. Built with modern web technologies and responsive design. Features product catalog, shopping cart, user authentication, and secure payment processing." data-img="assets/images/luxuryscents.svg" data-link="https://luxuryscents.in">
+          <div class="project-img">
+            <i class="fas fa-shopping-bag fa-3x"></i>
+          </div>
+          <div class="project-content">
+            <h3><i class="fas fa-store"></i> LuxuryScents</h3>
+            <p>Premium fragrance e-commerce with Razorpay and admin panel.</p>
+            <div class="project-tags">
+              <span class="tag"><i class="fas fa-shopping-cart"></i> E-commerce</span>
+              <span class="tag"><i class="fas fa-credit-card"></i> Razorpay</span>
+              <span class="tag"><i class="fas fa-cog"></i> Admin Panel</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card fade-in delay-2" data-title="Prime777 Realtors" data-desc="Real estate website with property listings and lead capture functionality. Features modern design and user-friendly interface. Includes property search filters, detailed listings, contact forms, and admin dashboard for property management." data-img="assets/images/prime777.svg" data-link="https://prime777realtors.com">
+          <div class="project-img">
+            <i class="fas fa-building fa-3x"></i>
+          </div>
+          <div class="project-content">
+            <h3><i class="fas fa-home"></i> Prime777 Realtors</h3>
+            <p>Real estate website with listings and lead capture.</p>
+            <div class="project-tags">
+              <span class="tag"><i class="fas fa-building"></i> Real Estate</span>
+              <span class="tag"><i class="fas fa-users"></i> Lead Capture</span>
+              <span class="tag"><i class="fas fa-mobile-alt"></i> Responsive</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card fade-in delay-1" data-title="Foody" data-desc="Responsive food delivery UI with complete order flow. Features modern design, intuitive navigation, and seamless user experience. Includes restaurant listings, menu browsing, cart management, and order tracking system." data-img="assets/images/foody.svg">
+          <div class="project-img">
+            <i class="fas fa-utensils fa-3x"></i>
+          </div>
+          <div class="project-content">
+            <h3><i class="fas fa-hamburger"></i> Foody Website</h3>
+            <p>Responsive food delivery UI and order flow.</p>
+            <div class="project-tags">
+              <span class="tag"><i class="fas fa-utensils"></i> Food UI</span>
+              <span class="tag"><i class="fas fa-mobile-alt"></i> Responsive</span>
+              <span class="tag"><i class="fas fa-palette"></i> UX Design</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card fade-in delay-2" data-title="Login Page" data-desc="Authentication demo with JavaScript validation and PHP backend. Secure login system with modern UI and error handling. Features form validation, password strength checking, session management, and security best practices." data-img="assets/images/loginpage.svg">
+          <div class="project-img">
+            <i class="fas fa-user-lock fa-3x"></i>
+          </div>
+          <div class="project-content">
+            <h3><i class="fas fa-sign-in-alt"></i> Login Page</h3>
+            <p>Auth demo with JS validation and PHP backend.</p>
+            <div class="project-tags">
+              <span class="tag"><i class="fas fa-user-shield"></i> Authentication</span>
+              <span class="tag"><i class="fab fa-php"></i> PHP</span>
+              <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack Section -->
+      <div class="tech-stack fade-in delay-3">
+        <h3><i class="fas fa-tools"></i> Technologies I Work With</h3>
+        <div class="tech-icons">
+          <div class="tech-item">
+            <i class="devicon-html5-plain colored tech-icon"></i>
+            <span class="tech-name">HTML5</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-css3-plain colored tech-icon"></i>
+            <span class="tech-name">CSS3</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-javascript-plain colored tech-icon"></i>
+            <span class="tech-name">JavaScript</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-php-plain colored tech-icon"></i>
+            <span class="tech-name">PHP</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-mysql-plain colored tech-icon"></i>
+            <span class="tech-name">MySQL</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-bootstrap-plain colored tech-icon"></i>
+            <span class="tech-name">Bootstrap</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-jquery-plain colored tech-icon"></i>
+            <span class="tech-name">jQuery</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-git-plain colored tech-icon"></i>
+            <span class="tech-name">Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>About Me</h2>
+        <p>Learn more about my background, skills, and experience</p>
+      </div>
+      <div class="about-content">
+        <div class="about-text fade-in">
+          <p>I am an aspiring full-stack developer pursuing BCA (IGNOU) with practical experience building responsive websites, e-commerce platforms, and admin tools.</p>
+          <p>My passion lies in creating digital experiences that are not only visually appealing but also functional, accessible, and user-friendly. I enjoy solving complex problems and continuously learning new technologies.</p>
+          
+          <div class="experience-section" style="margin-top: 30px;">
+            <h3 style="color: var(--accent); margin-bottom: 15px;">
+              <i class="fas fa-briefcase"></i> Experience
+            </h3>
+            <div class="experience-item">
+              <h4><i class="fas fa-laptop-code"></i> Website Developer</h4>
+              <p class="muted">3 months (client projects)</p>
+              <ul class="experience-details">
+                <li>Built e-commerce websites with payment integration</li>
+                <li>Developed admin dashboards with data visualization</li>
+                <li>Implemented responsive designs for various devices</li>
+                <li>Integrated third-party APIs and services</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="hero-actions" style="margin-top: 30px;">
+            <a href="#contact" class="btn">
+              <i class="fas fa-paper-plane"></i> Get In Touch
+            </a>
+            <a href="assets/resume/Deep-Yadav-Resume.pdf" class="btn btn-outline" download>
+              <i class="fas fa-file-pdf"></i> Download Resume
+            </a>
+          </div>
+        </div>
+        <div class="skills-grid fade-in delay-1">
+          <div class="skill-category">
+            <h4><i class="fas fa-paint-brush"></i> Frontend</h4>
+            <ul class="skill-list">
+              <li><i class="fab fa-html5"></i> HTML5 & CSS3</li>
+              <li><i class="fab fa-js"></i> JavaScript (ES6+)</li>
+              <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+              <li><i class="fab fa-js-square"></i> jQuery</li>
+              <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4><i class="fas fa-server"></i> Backend</h4>
+            <ul class="skill-list">
+              <li><i class="fab fa-php"></i> PHP</li>
+              <li><i class="fas fa-database"></i> MySQL</li>
+              <li><i class="fas fa-code"></i> REST APIs</li>
+              <li><i class="fas fa-check-circle"></i> Form Validation</li>
+              <li><i class="fas fa-user-shield"></i> Session Management</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4><i class="fas fa-tools"></i> Tools & Others</h4>
+            <ul class="skill-list">
+              <li><i class="fab fa-git"></i> Git & GitHub</li>
+              <li><i class="fas fa-cloud-upload-alt"></i> Web Hosting</li>
+              <li><i class="fas fa-credit-card"></i> Razorpay Integration</li>
+              <li><i class="fas fa-file-upload"></i> FTP & cPanel</li>
+              <li><i class="fas fa-lightbulb"></i> Problem Solving</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Get In Touch</h2>
+        <p>Feel free to reach out for collaborations or just to say hello</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info fade-in">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <p><a href="mailto:deepyadav03788@gmail.com">deepyadav03788@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Phone</h4>
+              <p>+91 7982403227</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Location</h4>
+              <p>New Delhi, India</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Availability</h4>
+              <p>Open to new opportunities</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-text fade-in delay-1">
+          <p>I'm currently open to new opportunities, whether it's full-time positions, freelance projects, or collaborations. If you have a project in mind or just want to connect, don't hesitate to reach out.</p>
+          <p style="margin-top: 20px;">I typically respond to emails within 24 hours. Looking forward to hearing from you!</p>
+          <div class="hero-actions" style="margin-top: 30px;">
+            <a href="mailto:deepyadav03788@gmail.com" class="btn">
+              <i class="fas fa-envelope"></i> Send Email
+            </a>
+            <a href="assets/resume/Deep-Yadav-Resume.pdf" class="btn btn-outline" download>
+              <i class="fas fa-file-pdf"></i> Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <a href="#" class="logo">
+          <i class="fas fa-code logo-icon"></i>
+          Deep <span>Yadav</span>
+        </a>
+        <div class="social-links">
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="copyright">© 2025 Deep Yadav. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Modal -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h3 id="modalTitle">Project Title</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <i class="fas fa-image fa-3x"></i>
+        </div>
+        <div class="modal-details">
+          <h4>Project Overview</h4>
+          <p id="modalDesc">Project description will appear here.</p>
+          <div class="hero-actions">
+            <a href="#" id="modalLink" class="btn" target="_blank">
+              <i class="fas fa-external-link-alt"></i> View Live Project
+            </a>
+            <button class="btn btn-outline close-modal">
+              <i class="fas fa-times"></i> Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dragon-bg.js"></script>
+</body>
+</html>
